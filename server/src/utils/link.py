@@ -9,7 +9,7 @@ def generate_link() -> dict:
     random_string = secrets.token_urlsafe(16)
     unique_id = str(uuid.uuid4())
 
-    link = 'http://127.0.0.1:8000/' + random_string + '/' + unique_id
+    link = 'http://localhost:3000/' + random_string + '/' + unique_id
 
     hashed_link = hashlib.sha256(link.encode()).hexdigest()
 
