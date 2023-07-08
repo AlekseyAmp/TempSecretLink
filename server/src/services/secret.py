@@ -27,11 +27,9 @@ async def create_secret(text: str,
 
     link = generate_link()
 
-    password = hash_password(password)
-
     secret = Secret(
         text=text,
-        password=password,
+        password=hash_password(password),
         hashed_link=link["hashed_link"]
     )
 
