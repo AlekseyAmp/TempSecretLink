@@ -1,17 +1,17 @@
-from redis_om import Migrator
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
+from redis_om import Migrator
 
 from routes import (
-    secret as SecretRouter
+    secret as SecretRouter,
 )
+
 
 app = FastAPI()
 
 Migrator().run()
 
 origins = [
-    "http://localhost",
     "http://localhost:3000",
 ]
 

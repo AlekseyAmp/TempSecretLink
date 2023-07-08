@@ -1,4 +1,7 @@
-from redis_om import JsonModel, Field
+from redis_om import (
+    JsonModel,
+    Field,
+)
 from typing import Optional
 
 
