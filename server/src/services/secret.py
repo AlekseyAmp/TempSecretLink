@@ -11,7 +11,7 @@ from utils.password import hash_password, verify_password
 
 async def create_secret(text: str,
                         expire_time: int,
-                        password: Optional[str] = None) -> dict:
+                        password: Optional[str]) -> dict:
 
     if not text:
         raise HTTPException(
@@ -42,7 +42,7 @@ async def create_secret(text: str,
 
 
 async def get_secret(link: str,
-                     password: Optional[str] = None) -> dict:
+                     password: Optional[str]) -> dict:
     hashed_link = hashlib.sha256(link.encode()).hexdigest()
 
     try:
