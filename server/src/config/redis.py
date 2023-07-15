@@ -1,6 +1,7 @@
 from redis_om import get_redis_connection
 
+from config.settings import settings
 
 redis_client = get_redis_connection(
-    host='127.0.0.1', port='6379'
+    host=settings.REDIS_HOSTNAME, port=settings.REDIS_PORT
 )

@@ -8,8 +8,8 @@ from routes import (
 
 
 app = FastAPI(title="TempSecretLink", version="0.1")
-
 Migrator().run()
+
 
 origins = [
     "http://localhost:3000",
