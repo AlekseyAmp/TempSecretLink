@@ -1,0 +1,20 @@
+$body_background: #f8f8f8;
+$white: #f7f7f7;
+$dark: rgba(34, 32, 32, 0.97);
+
+
+.dark-text {
+    text-decoration: none;
+    font-family: 'Segoe UI';
+    font-size: 17px;
+    font-weight: 500;
+    color: $dark;
+}
+
+.title {
+    font-family: 'Segoe UI';
+    font-size: 19px;
+    font-weight: bold;
+    color: $dark;
+    text-decoration: none;
+}
