@@ -1,11 +1,11 @@
 @import './variables.scss';
 
-body{
+body {
     background-color: $body_background;
 }
 
 .container {
-    max-width: 1460px;
+    max-width: 760px;
     margin: 0 auto;
 }
 
@@ -18,7 +18,6 @@ body{
     justify-content: center;
 }
 
-
 .column {
     display: flex;
     flex-direction: column;
@@ -29,3 +28,33 @@ body{
     flex-direction: row;
 }
 
+.logo {
+    img {
+        width: 57px;
+        height: 57px;
+    }
+}
+
+textarea{
+    padding: 17px 24px;
+    width: 600px;
+    height: 150px;
+    background-color: $input_background;
+    border: 2px solid $input_border;
+    outline: none;
+    resize: none;
+    border-radius: 12px;
+    font-size: 18px;
+    font-family: 'Montserrat';
+    font-weight: 500;
+    color: $gray;
+}
+
+textarea:hover {
+    transition: 0.2s;
+    border: 2px solid $dark_blue;
+}
+
+textarea:focus {
+    border: 2px solid $dark_blue;
+}
