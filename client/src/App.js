@@ -6,9 +6,12 @@ import './assets/global.scss';
 
 import routes from './routes';
 
+import Header from './components/Header/Header';
+
 function App() {
   return (
     <div className="container">
+      <Header />
       <Routes>
         {routes.map((route) => (
           <Route
