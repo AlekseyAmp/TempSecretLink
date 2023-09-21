@@ -1,0 +1,27 @@
+@import '../../../assets/variables.scss';
+
+.select {
+    select {
+        margin-top: 8px;
+        width: 200px;
+        height: 42px;
+        background-color: $main_background;
+        border: 2px solid $main_border;
+        outline: none;
+        border-radius: 5px;
+        font-size: 16px;
+        font-family: 'Montserrat';
+        font-weight: 500;
+        color: $gray;
+        padding-left: 17px;
+
+        &:hover,
+        &:focus {
+            border: 2px solid $dark_blue
+        }
+
+        option {
+            color: $dark-gray;
+        }
+    }
+}
