@@ -1,13 +1,45 @@
-.mainContent {
-    margin-top: 120px;
-    &Box {
-        margin-top: 43px;
-        p:nth-child(2) {
-            margin-top: 8px;
-            font-size: 16px;
+.main {
+    margin-top: 75px;
+
+    .createSecret {
+        margin-top: 55px;
+
+        &Text {
+            p:nth-child(2) {
+                margin-top: 8px;
+            }
         }
+
+        &Options {
+            margin-top: 20px;
+
+            &Content {
+                margin-top: 20px;
+                display: flex;
+                justify-content: space-between;
+            }
+        }
+
         textarea {
-            margin-top: 13px;
+            margin-top: 20px;
         }
+
+        button {
+            width: 100%;
+            margin-top: 20px;
+        }
+    }
+
+    .generatedLink {
+        &Content {
+            margin-top: 55px;
+        }
+        button {
+            margin-top: 20px;
+        }
+    }
+
+    .howItWorks {
+        margin-top: 55px;
     }
 }
