@@ -3,16 +3,17 @@
 $body_background: #11121c;
 $gray: #acabab; 
 $dark_gray: #7a7a7a;
-$blue: #0b568e;
+$green: #0e7948c9;
 $dark_blue: #084a799a;
-$input_background: rgb(49 70 84 / 10%);
-$input_border: rgba(42, 124, 179, 0.164);
+$dark_green: #0b482cb1;
+$main_background: rgb(49 70 84 / 10%);
+$main_border: rgb(73 99 116 / 16%);
 
 .title {
     font-family: 'Montserrat';
     font-size: 30px;
     font-weight: bold;
-    color: $blue;
+    color: $green;
     text-decoration: none;
 }
 
@@ -24,9 +25,25 @@ $input_border: rgba(42, 124, 179, 0.164);
     text-decoration: none;
 }
 
+.li-text {
+    font-family: 'Montserrat';
+    font-size: 17px;
+    font-weight: 500;
+    color: $gray;
+    text-decoration: none;
+}
+
 .dark-gray-text {
     font-family: 'Montserrat';
-    font-size: 18px;
+    font-size: 16px;
+    font-weight: 500;
+    color: $dark_gray;
+    text-decoration: none;
+}
+
+.label-text {
+    font-family: 'Montserrat';
+    font-size: 16px;
     font-weight: 500;
     color: $dark_gray;
     text-decoration: none;
