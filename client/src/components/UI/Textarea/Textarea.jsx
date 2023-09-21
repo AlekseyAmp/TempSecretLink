@@ -1,9 +1,13 @@
-import React from 'react'
+import React from 'react';
 
-function Textarea() {
+import styles from './Textarea.module.scss';
+
+function Textarea({ placeholder, onChange }) {
   return (
-    <textarea placeholder='Ваш текст...'>
-    </textarea>
+    <div onChange={onChange} className={styles.textarea}>
+      <textarea placeholder={placeholder}>
+      </textarea>
+    </div>
   )
 }
 
