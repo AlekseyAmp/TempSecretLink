@@ -1,0 +1,19 @@
+@import '../../../assets/variables.scss';
+
+.window {
+    padding: 17px 24px;
+    background-color: $main_background;
+    border: 2px solid $main_border;
+    outline: none;
+    border-radius: 5px;
+    font-size: 17px;
+    font-family: 'Montserrat';
+    font-weight: 500;
+    color: $gray;
+    transition: 0.2s;
+
+    &:hover,
+    &:focus {
+        border: 2px solid $dark_blue;
+    }
+}
