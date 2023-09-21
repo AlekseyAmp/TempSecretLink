@@ -1,0 +1,27 @@
+@import '../../../assets/variables.scss';
+
+.input {
+    display: flex;
+    flex-direction: column;
+
+    input {
+        margin-top: 8px;
+        width: 280px;
+        height: 34px;
+        padding-left: 17px;
+        background-color: $main_background;
+        border: 2px solid $main_border;
+        outline: none;
+        border-radius: 5px;
+        font-size: 16px;
+        font-family: 'Montserrat';
+        font-weight: 500;
+        color: $gray;
+        transition: 0.2s;
+
+        &:hover,
+        &:focus {
+            border: 2px solid $dark_blue;
+        }
+    }
+}
