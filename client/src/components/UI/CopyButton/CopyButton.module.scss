@@ -1,0 +1,21 @@
+@import '../../../assets/variables.scss';
+
+.copybutton {
+    button {
+        text-align: center;
+        border-style: none;
+        background-color: $green;
+        outline: none;
+        cursor: pointer;
+        border-radius: 5px;
+        padding: 9px 40px;
+        font-family: 'Montserrat';
+        font-size: 17px;
+        font-weight: 500;
+        transition: 0.3s;
+
+        &:hover {
+            background-color: $dark_blue;
+        }
+    }
+}
