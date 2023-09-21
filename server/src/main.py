@@ -7,7 +7,7 @@ from routes import (
 )
 
 
-app = FastAPI(title="TempSecretLink", version="0.1")
+app = FastAPI(title="secretshare API", version="0.1")
 Migrator().run()
 
 

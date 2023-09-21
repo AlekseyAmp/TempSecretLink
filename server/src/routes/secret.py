@@ -8,9 +8,9 @@ router = APIRouter()
 
 
 @router.post("/secret/create")
-async def create_secret(text: str, expire_time: int,
+async def create_secret(message: str, expire_time: int,
                         password: Optional[str] = None):
-    return await SecretService.create_secret(text, expire_time, password)
+    return await SecretService.create_secret(message, expire_time, password)
 
 
 @router.get("/secret")

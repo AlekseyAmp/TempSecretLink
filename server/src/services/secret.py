@@ -9,14 +9,14 @@ from utils.link import generate_link
 from utils.password import hash_password, verify_password
 
 
-async def create_secret(text: str,
+async def create_secret(message: str,
                         expire_time: int,
                         password: Optional[str]) -> dict:
 
-    if not text:
+    if not message:
         raise HTTPException(
             status_code=400,
-            detail="The field with the text is empty"
+            detail="The field with the message is empty"
         )
 
     if expire_time > 604800:
@@ -28,7 +28,7 @@ async def create_secret(text: str,
     link = generate_link()
 
     secret = Secret(
-        text=text,
+        message=message,
         password=hash_password(password),
         hashed_link=link["hashed_link"]
     )
@@ -59,7 +59,7 @@ async def get_secret(link: str,
         Secret.delete(secret.pk)
 
         return {
-            "text": secret.text
+            "message": secret.message
         }
 
     except NotFoundError:

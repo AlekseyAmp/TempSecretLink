@@ -6,6 +6,6 @@ from typing import Optional
 
 
 class Secret(JsonModel):
-    text: str
+    message: str
     password: Optional[str] = Field(default=None)
     hashed_link: str = Field(index=True)
