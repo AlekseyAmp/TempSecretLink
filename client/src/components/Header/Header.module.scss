@@ -2,11 +2,17 @@ header {
     .headerContent {
         display: flex;
         justify-content: space-between;
+        align-items: center;
         padding-top: 50px;
 
         &Menu {
             ul {
                 display: flex;
+                gap: 25px;
+
+                li {
+                    cursor: pointer;
+                }
             }
         }
     }
