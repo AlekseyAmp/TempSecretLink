@@ -1,0 +1,30 @@
+@import '../../../assets/variables.scss';
+
+.lockbutton {
+  button {
+    text-align: center;
+    border-style: none;
+    outline: none;
+    border-radius: 5px;
+    padding: 9px 40px;
+    font-family: 'Montserrat';
+    font-size: 17px;
+    font-weight: 500;
+    transition: 0.3s;
+
+    &.active {
+      background-color: $green;
+      color: $gray;
+      cursor: pointer;
+
+      &:hover {
+        background-color: $dark_blue;
+        color: $dark_gray;
+      }
+    }
+
+    &.noActive {
+      background-color: $dark_gray;
+    }
+  }
+}
