@@ -6,7 +6,7 @@ from typing import Optional
 
 from models.secret import Secret
 from utils.link import generate_link
-from utils.password import hash_password, verify_password
+from utils.hash import create_hash, verify_hash
 
 
 async def create_secret(message: str,
@@ -29,7 +29,7 @@ async def create_secret(message: str,
 
     secret = Secret(
         message=message,
-        password=hash_password(password),
+        password=create_hash(password),
         hashed_link=link["hashed_link"]
     )
 
@@ -41,8 +41,7 @@ async def create_secret(message: str,
     }
 
 
-async def get_secret(link: str,
-                     password: Optional[str]) -> dict:
+async def get_secret(link: str, password: Optional[str]) -> dict:
     hashed_link = hashlib.sha256(link.encode()).hexdigest()
 
     try:
@@ -50,11 +49,17 @@ async def get_secret(link: str,
             Secret.hashed_link == hashed_link
         ).first()
 
-        if not verify_password(password, secret.password):
-            raise HTTPException(
-                status_code=403,
-                detail="Invalid password"
-            )
+        if secret.password:
+            if not password:
+                return {
+                    "requiresPassword": True
+                }
+            
+            elif not verify_hash(password, secret.password):
+                raise HTTPException(
+                    status_code=403,
+                    detail="Invalid password"
+                )
 
         Secret.delete(secret.pk)
 
@@ -66,3 +71,4 @@ async def get_secret(link: str,
         return {
             "error": "Such a link does not exist"
         }
+
