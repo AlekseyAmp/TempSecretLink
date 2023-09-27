@@ -12,7 +12,7 @@ function Input({ title, type, name, onChange }) {
                 name={name}
             />
         </div>
-    )
+    );
 }
 
 export default Input;

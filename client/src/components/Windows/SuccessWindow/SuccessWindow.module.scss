@@ -1,0 +1,32 @@
+@import '../../../assets/variables.scss';
+
+.successBox {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  background-color: $green; 
+  font-weight: bold;
+  padding: 10px;
+  border-radius: 5px;
+  animation: slide-in 0.3s ease-in-out forwards, fade-out 0.3s ease-in-out 2.2s forwards;
+}
+
+@keyframes slide-in {
+  0% {
+    left: -200px;
+  }
+  100% {
+    left: 20px;
+  }
+}
+
+@keyframes fade-out {
+  0% {
+    left: 20px; 
+    opacity: 1;
+  }
+  100% {
+    left: -200px;
+    opacity: 0;
+  }
+}

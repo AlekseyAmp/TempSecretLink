@@ -8,7 +8,7 @@ function Textarea({ placeholder, onChange }) {
       <textarea placeholder={placeholder}>
       </textarea>
     </div>
-  )
+  );
 }
 
 export default Textarea;
