@@ -18,11 +18,19 @@ export async function createSecret(message, expire_time, password) {
     }
 }
 
-export async function getSecret(link, password) {
-    try {
-        const passwordQueryParam = password === null ? '' : `&password=${password}`;
 
-        const response = await axios.get(`/secret?link=${link}${passwordQueryParam}`);
+export async function getSecret(link) {
+    try {
+        let response = await axios.get(`/secret?link=${link}`);
+        
+        if (response.data && response.data.requiresPassword) {
+            const userPassword = prompt("Введите пароль:");
+            if (userPassword === null) {
+                return null;
+            }
+
+            response = await axios.get(`/secret?link=${link}&password=${userPassword}`);
+        }
 
         if (response.data) {
             return response.data;
@@ -31,3 +39,6 @@ export async function getSecret(link, password) {
         console.log(error.response.data.detail);
     }
 }
+
+
+
