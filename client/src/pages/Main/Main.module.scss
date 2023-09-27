@@ -31,11 +31,18 @@
     }
 
     .generatedLink {
+        p {
+            margin-top: 8px;
+        }
         &Content {
-            margin-top: 55px;
+            p {
+                margin-bottom: 10px;
+            }
+            margin-top: 45px;
         }
         button {
             margin-top: 20px;
+            margin-bottom: 12px;
         }
     }
 
