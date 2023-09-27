@@ -3,6 +3,7 @@ import hashlib
 import uuid
 
 from services.link import is_link_duplicate
+from utils.hash import create_hash
 
 
 def generate_link() -> dict:
@@ -11,9 +12,9 @@ def generate_link() -> dict:
 
     link = 'http://localhost:3000/' + random_string + '/' + unique_id
 
-    hashed_link = hashlib.sha256(link.encode()).hexdigest()
+    hashed_link = create_hash(link)
 
-    if is_link_duplicate(hashed_link):
+    if hashed_link is not None and is_link_duplicate(hashed_link):
         return generate_link()
 
     return {
