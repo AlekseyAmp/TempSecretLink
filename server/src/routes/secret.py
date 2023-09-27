@@ -14,6 +14,5 @@ async def create_secret(message: str, expire_time: int,
 
 
 @router.get("/secret")
-async def get_secret(link: str,
-                     password: Optional[str] = None):
+async def get_secret(link: str, password: Optional[str] = None):
     return await SecretService.get_secret(link, password)
